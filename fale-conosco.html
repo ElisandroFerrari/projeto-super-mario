@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Fale Conosco</title>
+  </head>
+
+  <body class="fale-conosco">
+    <div class="header">
+      <img src="./img/logo-header.png" alt="logo mario" />
+      <a href="index.html">Home</a>
+      <a href="nossos-servicos.html">Nossos serviços</a>
+      <a href="fale-conosco.html" aria-current="page">Fale conosco</a>
+    </div>
+
+    <!-- CONTEÚDO DA PÁGINA -->
+    <main class="container-contato">
+      <!-- FORMULÁRIO -->
+      <section class="card-contato">
+        <h1>Fale Conosco</h1>
+        <p class="subtitulo">
+          Envie sua mensagem e retornaremos o mais rápido possível.
+        </p>
+
+        <form id="form-contato">
+          <div class="campo">
+            <label for="nome">Nome</label>
+            <input id="nome" name="nome" type="text" placeholder="Seu nome" />
+          </div>
+
+          <div class="campo">
+            <label for="telefone">Telefone / WhatsApp</label>
+            <input
+              id="telefone"
+              name="telefone"
+              type="tel"
+              placeholder="(11) 9 9999-9999"
+            />
+          </div>
+
+          <div class="campo">
+            <label for="email">E-mail</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="seuemail@exemplo.com"
+            />
+          </div>
+
+          <div class="campo">
+            <label for="assunto">Assunto</label>
+            <select id="assunto" name="assunto">
+              <option value="">Selecione</option>
+              <option value="vazamento">Vazamento</option>
+              <option value="entupimento">Entupimento</option>
+              <option value="instalacao">Instalação / Troca de peças</option>
+              <option value="emergencia">Emergência</option>
+              <option value="outro">Outro</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <label for="mensagem">Mensagem</label>
+            <textarea
+              id="mensagem"
+              name="mensagem"
+              rows="5"
+              placeholder="Descreva o que está acontecendo..."
+            ></textarea>
+          </div>
+
+          <button type="submit">Enviar</button>
+
+          <p id="mensagem-sucesso" class="mensagem-sucesso"></p>
+        </form>
+      </section>
+
+      <!-- INFORMAÇÕES DE CONTATO -->
+      <aside class="card-contato card-infos">
+        <h2>Contatos</h2>
+
+        <ul class="lista-contatos">
+          <li><strong>Telefone (fixo):</strong> (11) 3456-7890</li>
+          <li><strong>WhatsApp:</strong> (11) 9 8765-4321</li>
+          <li><strong>Plantão 24h:</strong> (11) 4000-2424</li>
+          <li><strong>E-mail:</strong> contato@mariobrosencanadores.com.br</li>
+          <li>
+            <strong>Orçamentos:</strong> orcamentos@mariobrosencanadores.com.br
+          </li>
+          <li>
+            <strong>Endereço:</strong> Rua dos Cogumelos, 123 – Centro, São
+            Paulo/SP
+          </li>
+          <li>
+            <strong>Horários:</strong> Seg–Sex 08:00–18:00 | Sáb 08:00–12:00
+          </li>
+          <li><strong>Instagram:</strong> @mariobrosencanadores (fictício)</li>
+        </ul>
+
+        <div class="acoes-contato">
+          <a class="botao-secundario" href="tel:+551134567890">Ligar</a>
+          <a
+            class="botao-secundario"
+            href="mailto:contato@mariobrosencanadores.com.br"
+            >E-mail</a
+          >
+        </div>
+      </aside>
+    </main>
+
+    <!-- WhatsApp flutuante (mantido do seu código) -->
+    <a href="https://w.app/u3ayb6" class="link-whatsapp">
+      <img src="./img/whatsapp.png" alt="link para whatsapp" />
+    </a>
+
+    <!-- se você já usa scripts.js no projeto, mantenha -->
+    <script src="scripts.js"></script>
+  </body>
+</html>

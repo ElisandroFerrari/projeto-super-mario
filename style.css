@@ -1,0 +1,459 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box; 
+}
+
+.logo-mario {
+    height: 200px;
+}
+
+button {
+    background-color: #c51111;
+    color: white;
+    border: 2px solid #c51111;
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 30px;
+    transition: 0.5s ease-in-out;   
+}
+
+button:hover {
+    background-color: white;
+    color: #c51111;
+
+}
+
+
+.mario-e-luigi {
+    height: 500px;
+
+}
+
+body {
+    height: 100vh;
+   
+}
+
+.caixa-principal {
+    width: 40%;
+   
+    
+}
+
+p {
+    color: white;
+}
+.caixa-video {
+    position: fixed;
+    top: 0;
+    z-index: -1;
+
+}
+
+video {
+   min-width: 100vw;
+    min-height: 100vh;
+    object-fit: cover;
+}
+
+.mascara {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+    position: fixed;
+    top: 0;
+}
+
+.caixa-mae {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 100px;
+    height: 100vh;
+
+}
+
+.link-whatsapp {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1000;
+}
+
+.link-whatsapp img {
+    width: 60px;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 30px;
+}
+
+.header img {
+    height: 60px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.header a {
+    text-decoration: none;
+    color: white;
+}
+
+.header a:hover {
+    color: #c51111;
+    font-size: 26px;
+    transition: 0.5s ease-in-out ;
+
+}
+
+.formulario-fale-conosco {
+    background-color: white;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%); 
+    left: -300px;
+    padding: 20px;
+    border-radius: 5px;
+    transition: 0.5s ease-in-out;
+    z-index: 1000;
+}
+
+input {
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding-left: 5px;
+    outline-color: #18d80f;
+}
+
+textarea {
+    width: 270px;
+    height: 100px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding-left: 5px;
+    outline-color: #18d80f;
+}
+
+.mascara-formulario{
+    visibility: hidden;
+    position: fixed;
+    inset: 0;                 /* top:0; right:0; bottom:0; left:0 */
+    width: 100vw;
+    height: 100vh;            /* aqui é o principal */
+    background: linear-gradient(
+      109deg,
+      rgba(10, 12, 16, 0.99) 15%,
+      rgba(10, 12, 16, 0.7) 50%,
+      rgba(10, 12, 16, 0.99) 85%
+    );
+    transition: visibility 0.5s ease-in-out;
+    z-index: 999;             /* garante que fique por cima do site */
+  }
+
+.nossos-servicos .header{
+    margin: 0;
+    padding: 30px;
+  }
+
+.nossos-servicos{
+    min-height: 100vh;
+    background-image: url("./img/backgroud.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .conteudo-servicos{
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 24px;
+    color: #fff;
+    background: rgba(0,0,0,0.55);
+    border-radius: 10px;
+  }
+  
+  .conteudo-servicos h1{
+    margin-bottom: 12px;
+  }
+
+  .fale-conosco .header{
+    margin: 0;
+    padding: 30px;
+  }
+
+  .fale-conosco {
+    min-height: 100vh;
+    background-image: url("./img/fale-conosco.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+/* =========================
+   PÁGINA FALE CONOSCO
+   (não afeta o index)
+   ========================= */
+
+/* Coloque uma imagem de fundo se quiser:
+   - Crie uma imagem em: ./img/background-contato.jpg
+   - Ou troque o nome abaixo para a sua
+*/
+body.fale-conosco{
+    min-height: 100vh;
+    background-image: url("./img/fale-conosco.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  /* “máscara” escura por cima do fundo para dar contraste */
+  body.fale-conosco::before{
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    z-index: -1;
+  }
+  
+  /* Header só desta página (tira margem 30px do seu .header global) */
+  body.fale-conosco .header{
+    margin: 0;
+    padding: 22px 28px;
+  }
+  
+  /* Layout principal (form + contatos) */
+  .container-contato{
+    width: min(1100px, 92%);
+    margin: 20px auto 60px;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 22px;
+  }
+  
+  /* Em telas menores: fica um embaixo do outro */
+  @media (max-width: 900px){
+    .container-contato{
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* Cards */
+  .card-contato{
+    background: rgba(15, 15, 20, 0.75);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 12px;
+    padding: 28px;
+    backdrop-filter: blur(6px);
+  }
+  
+  .card-contato h1{
+    font-size: 34px;
+    margin-bottom: 8px;
+    color: #fff;
+  }
+  
+  .card-contato h2{
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+  
+  .subtitulo{
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 18px;
+  }
+  
+  /* Campos do formulário */
+  .campo{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 14px;
+  }
+  
+  .campo label{
+    font-weight: 700;
+    font-size: 14px;
+    color: rgba(255,255,255,0.95);
+  }
+  
+  /* inputs/textarea/select só dentro do card */
+  .card-contato input,
+  .card-contato select,
+  .card-contato textarea{
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.18);
+    background: rgba(0,0,0,0.35);
+    color: #fff;
+    padding: 12px 12px;
+    outline: none;
+  }
+  
+  .card-contato textarea{
+    resize: vertical;
+    min-height: 120px;
+  }
+  
+  .card-contato input::placeholder,
+  .card-contato textarea::placeholder{
+    color: rgba(255,255,255,0.65);
+  }
+  
+  /* foco */
+  .card-contato input:focus,
+  .card-contato select:focus,
+  .card-contato textarea:focus{
+    border-color: rgba(197, 17, 17, 0.9);
+    box-shadow: 0 0 0 3px rgba(197, 17, 17, 0.25);
+  }
+  
+  /* Botão (aproveita seu estilo, mas garante largura total aqui) */
+  body.fale-conosco button{
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  /* Mensagem de sucesso (se usar no JS) */
+  .mensagem-sucesso{
+    margin-top: 12px;
+    font-weight: 700;
+    color: #7CFF7C;
+  }
+  
+  /* Lista de contatos */
+  .lista-contatos{
+    list-style: none;
+    margin-top: 10px;
+    padding-left: 0;
+  }
+  
+  .lista-contatos li{
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.10);
+    color: rgba(255,255,255,0.92);
+  }
+  
+  .lista-contatos li strong{
+    color: #fff;
+  }
+  
+  /* Botões/links de ação (Ligar / E-mail) */
+  .acoes-contato{
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+    flex-wrap: wrap;
+  }
+  
+  .botao-secundario{
+    display: inline-block;
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.20);
+    background: rgba(0,0,0,0.35);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.2s ease-in-out;
+  }
+  
+  .botao-secundario:hover{
+    border-color: rgba(197, 17, 17, 0.9);
+    color: #fff;
+    transform: translateY(-1px);
+  }
+  
+  /* WhatsApp flutuante (você já tem, mantive só por garantia de z-index) */
+  body.fale-conosco .link-whatsapp{
+    z-index: 2000;
+  }
+
+  @media (max-width: 768px) {
+    .caixa-mae{
+      flex-direction: column;   /* empilha (texto em cima, imagem embaixo) */
+      padding: 20px;            /* tira o padding gigante */
+      height: auto;             /* evita cortar conteúdo */
+      gap: 20px;
+      text-align: center;
+    }
+  
+    .caixa-principal{
+      width: 100%;              /* em vez de 40% */
+    }
+  
+    .logo-mario{
+      height: 140px;            /* menor no celular */
+    }
+  
+    .mario-e-luigi{
+      height: auto;             /* remove altura fixa */
+      width: min(320px, 85vw);  /* limita e adapta à tela */
+      display: block;
+      margin: 0 auto;
+    }
+  
+    .header{
+      margin: 0;                /* seu header tinha margin: 30px */
+      padding: 16px;
+      flex-wrap: wrap;          /* permite quebrar linha */
+      justify-content: center;
+      gap: 16px;
+    }
+  
+    .header a{
+      font-size: 16px;          /* evita estourar */
+    }
+  
+    button.botao-entre-em-contato{
+      width: 100%;
+      max-width: 320px;
+    }
+  }
+
+  /* estado fechado (PC) - você já usa left:-300px */
+.formulario-fale-conosco{
+    z-index: 1000;
+  }
+  
+  /* CELULAR: vira bottom sheet */
+  @media (max-width: 768px){
+    .formulario-fale-conosco{
+      left: 50% !important;              /* centraliza no celular */
+      top: auto !important;              /* não usa mais top 50% */
+      bottom: 0;
+      width: min(94vw, 420px);
+      max-height: 85vh;
+      overflow: auto;
+  
+      transform: translate(-50%, 110%);  /* começa fora da tela (embaixo) */
+      border-radius: 16px 16px 0 0;
+    }
+  }
+
+  @media (max-width: 768px){
+    .header{
+      gap: 12px;
+      padding: 12px 14px;
+    }
+  
+    .header a{
+      font-size: 14px;
+      white-space: nowrap; /* evita quebrar palavras */
+    }
+  
+    .header img{
+      height: 44px;
+    }
+  }
